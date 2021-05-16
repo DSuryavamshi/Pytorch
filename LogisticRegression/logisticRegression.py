@@ -50,7 +50,7 @@ epochs = 10000
 
 for epoch in range(epochs):
     # foward pass
-    y_pred = model.forward(X_train)
+    y_pred = model(X_train)
 
     # loss
     l = loss(y_pred, y_train)
@@ -69,7 +69,7 @@ for epoch in range(epochs):
 
 #Evaluation
 with torch.no_grad():
-    y_test_pred = model.forward(X_test).round()
+    y_test_pred = model(X_test).round()
 
     accuracy = y_test_pred.eq(y_test).sum()/y_test.shape[0]
     print(f"Accuracy of the model: {accuracy:.3f}")
