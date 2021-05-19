@@ -8,7 +8,7 @@ print(f"Softmax output for x = {x}:\n{output}")
 
 # While calculating CrossEntropyLoss using pytorch remember,
 # 1. softmax is implemented automatically (nn.LogSoftmax, nn.NLLLoss)
-# 2. One Hot Encoded is needed, Y should have correct class label
+# 2. One Hot Encoded not is needed, Y should have correct class label
 # 3. Predicted outcome has raw scores, not softmax
 
 loss = nn.CrossEntropyLoss()
